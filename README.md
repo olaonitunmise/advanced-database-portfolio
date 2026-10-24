@@ -16,3 +16,10 @@ An assignment designed to show an understanding of advanced database design, MIT
 3. `portfolio-3-transactions-concurrency/`: commit, rollback, isolation, concurrency control
 4. `portfolio-4-nosql/`: MongoDB model and implementation
 5. `portfolio-5-distributed-cloud/`: replication, sharding, availability, cloud deployment
+
+
+## Environment
+- PostgreSQL (pgAdmin as the client)
+- MongoDB Atlas (cloud, free tier)
+- VS Code
+- GitHub
