@@ -75,7 +75,7 @@ The database has nine tables.
 | staff to loans | one-to-many |
 | loan to fine | one-to-zero-or-one |
 
-![ER diagram](er-diagram.png)
+![ER diagram](er_diagram_city_light.png)
 
 *Figure 1: ER diagram generated from the implemented database. Note that the diagram shows tables and relationships but not CHECK constraints, which are described below.*
 
