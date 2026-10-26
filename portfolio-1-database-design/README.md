@@ -124,7 +124,6 @@ I started from a flat loan record and normalised it to 3NF, and checked the resu
 | `screenshots/02-row-counts.png` | Row counts after running `data.sql`, matching the expected values |
 | `screenshots/03-status-check-1.png` | Verification query 1 returning no rows: no copy is marked `on_loan` without an open loan |
 | `screenshots/04-status-check-2.png` | Verification query 2 returning no rows: no open loan has a copy that is not marked `on_loan` |
-| `screenshots/05-constraint-test.png` | (Optional) a deliberately invalid insert being rejected by a constraint |
 
 Verification queries used for screenshots 03 and 04, both of which should return no rows:
 
