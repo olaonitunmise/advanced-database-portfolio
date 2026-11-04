@@ -2,7 +2,7 @@
 
 ## 1. Test setup
 
-- **Database:** PostgreSQL 17, queried through pgAdmin on a laptop ([CPU and RAM: fill in]).
+- **Database:** PostgreSQL 17, queried through pgAdmin on a laptop
 - **Data:** synthetic bulk data added on top of the Portfolio 1 sample data: about 20,000 members, 20,012 books, 60,020 copies, 300,009 loans and 82,371 fines. The bulk data is evenly spread, so it does not give a realistic popularity pattern, but it is large enough to show real differences between plans.
 - **Method:** each query was run with `EXPLAIN (ANALYZE, BUFFERS)` before any extra indexes existed (only primary key and UNIQUE indexes, see `screenshots/baseline-indexes.png`), then again after running `indexes.sql`. `ANALYZE` was run after loading the data and after creating the indexes, so the planner's statistics were current.
 - **Timing:** each figure is the Execution Time of one run (the third run of the query), so it reflects a warm cache. Every plan reports shared hits and no disk reads. Each figure is a single measurement, not an average.
