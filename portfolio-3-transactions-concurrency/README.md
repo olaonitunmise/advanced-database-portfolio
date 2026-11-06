@@ -169,7 +169,6 @@ One more option that I did **not** implement or test is a partial unique index o
 
 ## 8. Challenges and lessons
 
-*(Edit this section so it matches what happened to you. Below is what my screenshots and files support.)*
 
 **Challenges**
 
