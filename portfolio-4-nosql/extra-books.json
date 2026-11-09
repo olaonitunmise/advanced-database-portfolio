@@ -1,0 +1,52 @@
+[
+  {
+    "isbn": "9780000000013",
+    "title": "Learning NoSQL Databases",
+    "publisher": "CityLight Press",
+    "publicationYear": 2024,
+    "category": "Technology",
+    "authors": [{ "firstName": "Tola", "lastName": "Adebayo" }],
+    "edition": 2,
+    "tags": ["databases", "nosql", "mongodb"],
+    "copies": [
+      { "barcode": "CL-0021", "status": "available", "acquiredDate": "2026-09-01" },
+      { "barcode": "CL-0022", "status": "on_loan",   "acquiredDate": "2026-09-01" }
+    ],
+    "reviews": [
+      { "reviewer": "Adaeze Okafor", "rating": 5, "comment": "Clear and practical.",        "date": "2026-10-05" },
+      { "reviewer": "Tunde Balogun", "rating": 4, "comment": "Good examples, a bit short.", "date": "2026-10-12" }
+    ]
+  },
+  {
+    "isbn": "9780000000014",
+    "title": "The Tortoise and the River",
+    "publisher": "CityLight Press",
+    "publicationYear": 2023,
+    "category": "Children's",
+    "authors": [{ "firstName": "Bola", "lastName": "Ogunleye" }],
+    "ageRange": "6-9",
+    "illustrated": true,
+    "copies": [
+      { "barcode": "CL-0023", "status": "available", "acquiredDate": "2026-09-01" },
+      { "barcode": "CL-0024", "status": "available", "acquiredDate": "2026-09-01" }
+    ],
+    "reviews": [
+      { "reviewer": "Ngozi Eze",     "rating": 5, "comment": "My child loved it.",    "date": "2026-10-02" },
+      { "reviewer": "Funmi Adeyemi", "rating": 5, "comment": "Lovely illustrations.", "date": "2026-10-09" },
+      { "reviewer": "Chinedu Obi",   "rating": 4, "comment": "Nice story.",           "date": "2026-10-20" }
+    ]
+  },
+  {
+    "isbn": "9780000000015",
+    "title": "Notes on Modern Lagos",
+    "publisher": "Island Books",
+    "publicationYear": 2021,
+    "category": "History",
+    "authors": [{ "firstName": "Kemi", "lastName": "Balogun" }],
+    "tags": ["lagos", "urban history"],
+    "language": "English",
+    "copies": [
+      { "barcode": "CL-0025", "status": "available", "acquiredDate": "2026-09-01" }
+    ]
+  }
+]
