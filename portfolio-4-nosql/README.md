@@ -192,7 +192,6 @@ A **key-value** store could cache each copy's availability for very fast lookups
 
 ## 10. Challenges and lessons
 
-*(Edit this section so it matches what happened to you. These points are supported by my screenshots.)*
 
 **Challenges**
 
