@@ -15,7 +15,6 @@ This portfolio uses the same case study as Portfolios 1 to 3. See the [root READ
 | `books.json` | The 12 sample books exported from PostgreSQL |
 | `extra-books.json` | 3 additional titles with different fields, to show the flexible schema |
 | `queries.js` | The find queries (N1 to N6) and aggregation pipelines (A1 to A3) |
-| `indexes.js` | The two indexes created |
 | `screenshots/` | Evidence for each step |
 
 ## 3. How to run
