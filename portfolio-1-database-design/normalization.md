@@ -1,10 +1,10 @@
-# Normalisation: CityLight Public Library
+# Normalization: CityLight Public Library
 
 ## 1. Approach
 
 To justify my design, I started from the kind of single flat record a small library might keep for each loan, identified the problems with it, and normalised it step by step to Third Normal Form (3NF). I then checked the final tables against Boyce-Codd Normal Form (BCNF) and recorded the one place where I deliberately kept some redundancy.
 
-## 2. Unnormalised starting point
+## 2. Unnormalized starting point
 
 Each row describes one loan and repeats everything related to it:
 
@@ -82,12 +82,12 @@ I used generated integer keys (`GENERATED ALWAYS AS IDENTITY`) as primary keys, 
 
 ## 8. Deliberate trade-offs
 
-I did not follow normalisation rules blindly. Two decisions are intentional:
+I did not follow normalization rules blindly. Two decisions are intentional:
 
 1. **`book_copies.status`** can be derived from `loans`, since a copy is on loan when it has a loan with no `return_date`. A strict reading would remove it. I kept it because it makes the "is this copy available?" check a single-row lookup, and because it lets me demonstrate a concurrency problem in Portfolio 3 (two sessions reading "available" at the same time). The cost is that the two sources could disagree. I wrote verification queries to detect mismatches, and transactions in Portfolio 3 are what keep them consistent.
 
-2. **`fines.amount`** could be calculated from the due date, return date and a daily rate. I stored it as a record of what was actually charged, so that a later change to the fine rate does not alter past charges. This is a controlled denormalisation for historical accuracy.
+2. **`fines.amount`** could be calculated from the due date, return date and a daily rate. I stored it as a record of what was actually charged, so that a later change to the fine rate does not alter past charges. This is a controlled denormalization for historical accuracy.
 
 ## 9. Summary
 
-Normalising removed the update, insertion and deletion anomalies of the flat record and gave a clean design in which each fact is stored once. The two exceptions above are conscious choices for performance and for demonstrating the later portfolios, and I can explain the reasoning behind them.
+Normalizing removed the update, insertion and deletion anomalies of the flat record and gave a clean design in which each fact is stored once. The two exceptions above are conscious choices for performance and for demonstrating the later portfolios, and I can explain the reasoning behind them.
