@@ -21,5 +21,4 @@ An assignment designed to show an understanding of advanced database design, MIT
 ## Environment
 - PostgreSQL (pgAdmin as the client)
 - MongoDB Atlas (cloud, free tier)
-- VS Code
 - GitHub
