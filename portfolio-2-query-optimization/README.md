@@ -1,4 +1,4 @@
-# Portfolio 2: Query Processing and Optimisation
+# Portfolio 2: Query Processing and Optimization
 
 ## 1. Objective
 
@@ -13,7 +13,7 @@ This portfolio uses the same case study and database as Portfolio 1. See the [ro
 | `generate-large-data.sql` | Creates synthetic bulk data so that timings and plans are meaningful |
 | `queries.sql` | The eight business queries (Q1 to Q8), each with a comment header |
 | `explain-plans.sql` | The same queries wrapped in `EXPLAIN (ANALYZE, BUFFERS)` |
-| `indexes.sql` | The six indexes created for optimisation |
+| `indexes.sql` | The six indexes created for optimization |
 | `performance-analysis.md` | Before/after results table and written analysis |
 | `execution-plans/` | Full plan output as text: `q1-before.txt` to `q8-before.txt` and `q1-after.txt` to `q8-after.txt` |
 | `screenshots/` | Result screenshots, check queries, index lists, index and table sizes, graphical plans |
@@ -93,7 +93,7 @@ Each time is the Execution Time of a single warm-cache run. The full analysis, i
 | `data-row-counts.png` | Row counts after the bulk load |
 | `q1-result.png` to `q8-result.png` | Result of each query |
 | `q5-check-count.png`, `q5-check-max.png`, `q6-check-count.png`, `q7-check.png`, `q8-check.png` and others | Independent check queries confirming the results |
-| `baseline-indexes.png` | Only primary key and UNIQUE indexes before optimisation (15 indexes) |
+| `baseline-indexes.png` | Only primary key and UNIQUE indexes before optimization (15 indexes) |
 | `indexes-after.png` | 21 indexes after `indexes.sql`, including the six new ones |
 | `index-sizes.png`, `table-sizes.png` | Storage cost of the new indexes and size of the affected tables |
 | `q2-before-plan.png`, `q2-after-plan.png` (and others) | Graphical execution plans from pgAdmin |
@@ -111,7 +111,7 @@ Each time is the Execution Time of a single warm-cache run. The full analysis, i
 
 - Several indexes made no difference. I expected `idx_fines_paid` to help Q4, but the plan shows PostgreSQL ignoring it because about half of the fines are unpaid.
 - Q1 improved less than expected because the title scan was only part of the cost.
-- Q6 became faster even though it touches many more buffers after indexing. [Add what you made of this.]
+- Q6 became faster even though it touches many more buffers after indexing.
 - I had to correct Q7: my first version used `RANK()`, which would have returned about 20,000 rows because of ties.
 
 Lessons: indexes pay off when a query keeps a small fraction of a table; foreign keys are not indexed automatically in PostgreSQL; read the plan, not just the time; an unused index is pure cost; a single timing on a laptop should not be over-interpreted.
